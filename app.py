@@ -21,7 +21,8 @@ def fetch_movie_data(movie_names, date):
     results = {}
 
     for movie in movie_names:
-        driver = webdriver.Chrome(options=options, service=Service(ChromeDriverManager().install()))
+        # driver = webdriver.Chrome(options=options, service=Service(ChromeDriverManager().install()))
+        driver = webdriver.Chrome(options=options)
         try:
             try:
                 search_query = f"{movie} movie {date} {day_of_week} collection"
